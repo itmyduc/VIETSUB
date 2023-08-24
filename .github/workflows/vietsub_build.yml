@@ -8,7 +8,7 @@ on:
     types: [started]
     
 env:              
-  ROM_URL: 'https://hugeota.d.miui.com/V12.5.7.0.RGICNXM/miui_PICASSO_V12.5.7.0.RGICNXM_02c694af6e_11.0.zip'
+  ROM_URL: 'https://onedrive.live.com/download?resid=8AF5E3D4EB752F01%21703&authkey=!ANMTaQ_rMDaCWEQ'
   Zip_name: 'MIUI_VietSub_PICASSO_V12.5.7.0.RGICNXM_02c694af6e_11.0.zip'
   
 jobs:
