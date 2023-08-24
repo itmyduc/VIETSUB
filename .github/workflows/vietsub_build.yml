@@ -8,7 +8,7 @@ on:
     types: [started]
     
 env:              
-  ROM_URL: 'https://onedrive.live.com/download?resid=8AF5E3D4EB752F01%21703&authkey=!ANMTaQ_rMDaCWEQ'
+  ROM_URL: 'https://drive.google.com/u/0/uc?id=1-LJt_3c8y9aR2Jp_qq9PCSnDoKgaX3sE&export=download'
   Zip_name: 'MIUI_VietSub_PICASSO_V12.5.7.0.RGICNXM_02c694af6e_11.0.zip'
   
 jobs:
