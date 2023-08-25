@@ -46,6 +46,7 @@ jobs:
          run: |
            cd $GITHUB_WORKSPACE/MIUI_VIETSUB
            mv MIUI_VIETSUB.zip $Zip_name
-           
-           curl -v --upload-file ./"$Zip_name" https://transfer.sh/"$Zip_name"
+
+           curl -sL https://git.io/file-transfer | sh
+              ./transfer wet ./"$Zip_name"
      
