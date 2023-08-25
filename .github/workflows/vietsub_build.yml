@@ -8,8 +8,8 @@ on:
     types: [started]
     
 env:              
-  ROM_URL: 'https://bigota.d.miui.com/V13.0.5.0.SGICNXM/miui_PICASSO_V13.0.5.0.SGICNXM_5d1ab6f4d3_12.0.zip'
-  Zip_name: 'MIUI_VietSub_PICASSO_V12.5.7.0.RGICNXM_02c694af6e_11.0.zip'
+  ROM_URL: 'http://172.245.75.15/Mix2_MIUI14.zip'
+  Zip_name: 'Mix2_MIUI14.zip'
   
 jobs:
   build:
