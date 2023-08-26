@@ -42,11 +42,12 @@ jobs:
             chmod +x download.sh
             chmod +x bhlnk.sh
             sudo bash download.sh $ROM_URL 
-       - name: Upload Rom to WeTransfer...
-         run: |
-           cd $GITHUB_WORKSPACE/MIUI_VIETSUB
-           mv MIUI_VIETSUB.zip $Zip_name
-
-           curl -sL https://git.io/file-transfer | sh
-              ./transfer wet ./"$Zip_name"
-     
+- name: Tải lên
+        uses: softprops/action-gh-release@v1
+        with:
+          tag: 
+          name: Tool ZH-VN
+          tag_name: Package
+          files: VH_*.zip
+          prerelease: true
+          generate_release_notes: true
