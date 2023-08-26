@@ -1,3 +1,4 @@
+# This is a basic workflow to help you get started with Actions
 
 name: vietsub_build
 
@@ -7,8 +8,8 @@ on:
     types: [started]
     
 env:              
-  ROM_URL: 'http://172.245.75.15/Mix2_MIUI14.zip'
-  Zip_name: 'Mix2_MIUI14.zip'
+  ROM_URL: 'https://hugeota.d.miui.com/V12.5.7.0.RGICNXM/miui_PICASSO_V12.5.7.0.RGICNXM_02c694af6e_11.0.zip'
+  Zip_name: 'MIUI_VietSub_PICASSO_V12.5.7.0.RGICNXM_02c694af6e_11.0.zip'
   
 jobs:
   build:
@@ -33,7 +34,7 @@ jobs:
 
        - name: Cloning...
          run: |
-             git clone -b action https://github.com/Trunglinh97/MIUI_VIETSUB.git $GITHUB_WORKSPACE/MIUI_VIETSUB
+             git clone -b action https://github.com/buihien224/MIUI_VIETSUB.git $GITHUB_WORKSPACE/MIUI_VIETSUB
            
        - name: Download zip... and run
          run: |
@@ -41,9 +42,10 @@ jobs:
             chmod +x download.sh
             chmod +x bhlnk.sh
             sudo bash download.sh $ROM_URL 
-        - name: Upload to transfer
+       - name: Upload Rom to WeTransfer...
          run: |
-            cd $GITHUB_WORKSPACE/MIUI_VIETSUB
-            zip_name=$(ls *.zip | grep "vietsub")
-            curl --upload-file $zip_name https://transfer.sh/"$zip_name"
-        
+           cd $GITHUB_WORKSPACE/MIUI_VIETSUB
+           mv MIUI_VIETSUB.zip $Zip_name
+           
+           curl --upload-file ./"$Zip_name" https://transfer.sh/"$Zip_name"
+     
