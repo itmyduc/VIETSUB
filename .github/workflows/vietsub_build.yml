@@ -34,11 +34,11 @@ jobs:
 
        - name: Cloning...
          run: |
-             git clone -b action https://github.com/buihien224/MIUI_VIETSUB.git $GITHUB_WORKSPACE/MIUI_VIETSUB
+             git clone -b action TrungLinh97/MIUI_VIETSUB-1.git $GITHUB_WORKSPACE/MIUI_VIETSUB-1
            
        - name: Download zip... and run
          run: |
-            cd $GITHUB_WORKSPACE/MIUI_VIETSUB
+            cd $GITHUB_WORKSPACE/MIUI_VIETSUB-1
             chmod +x download.sh
             chmod +x bhlnk.sh
             sudo bash download.sh $ROM_URL 
