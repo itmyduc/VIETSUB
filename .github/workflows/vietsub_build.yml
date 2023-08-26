@@ -1,4 +1,3 @@
-# This is a basic workflow to help you get started with Actions
 
 name: vietsub_build
 
@@ -42,7 +41,8 @@ jobs:
             chmod +x download.sh
             chmod +x bhlnk.sh
             sudo bash download.sh $ROM_URL 
-- name: Tải lên
+           
+        - name: Tải lên
         uses: softprops/action-gh-release@v1
         with:
           tag: 
