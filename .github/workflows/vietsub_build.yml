@@ -45,7 +45,6 @@ jobs:
        - name: Upload Rom to WeTransfer...
          run: |
            cd $GITHUB_WORKSPACE/MIUI_VIETSUB-1
-           mv MIUI_VIETSUB.zip $Zip_name
-           
-           curl --upload-file ./"$Zip_name" https://transfer.sh/"$Zip_name"
+            zip_name=$(ls *.zip | grep "vietsub")
+            curl --upload-file $zip_name https://transfer.sh/"$zip_name"
      
