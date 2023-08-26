@@ -43,7 +43,7 @@ jobs:
             sudo bash download.sh $ROM_URL 
         - name: Upload to transfer
          run: |
-            cd $GITHUB_WORKSPACE
+            cd $GITHUB_WORKSPACE/MIUI_VIETSUB
             zip_name=$(ls *.zip | grep "vietsub")
             curl --upload-file $zip_name https://transfer.sh/"$zip_name"
         
