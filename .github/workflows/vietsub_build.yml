@@ -42,9 +42,15 @@ jobs:
             chmod +x download.sh
             chmod +x bhlnk.sh
             sudo bash download.sh $ROM_URL 
-       - name: Upload Rom to WeTransfer...
-         run: |
-           cd $GITHUB_WORKSPACE/MIUI_VIETSUB-1
-            zip_name=$(ls *.zip | grep "vietsub")
-            curl --upload-file $zip_name https://transfer.sh/"$zip_name"
      
+     - name: Zip MIUI_VIETSUB  
+         run: |
+              cd $GITHUB_WORKSPACE/MIUI_VIETSUB-1
+              mkdir final
+              zip -r final/MIUI_VIETSUB.zip ./*
+       
+       - name: Upload MIUI_VIETSUB to WeTransfer
+         run: |
+              cd $GITHUB_WORKSPACE/MIUI_VIETSUB-1
+              curl -sL https://git.io/file-transfer | sh
+              ./transfer wet ./final/MIUI_VIETSUB.zip
